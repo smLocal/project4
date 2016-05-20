@@ -6,7 +6,7 @@
 
 [Trello](https://trello.com/b/6Gm3KO1T/fst)
 
-[FST before facelift](http://www.foreignsporttechnician.com/)
+[FST current state](http://www.foreignsporttechnician.com/)
 
 ## About
 
