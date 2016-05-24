@@ -28,7 +28,12 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash());
 
-app.use('/', router);
+// app.use('/', router);
+app.set('public', path.join(__dirname, 'public'));
+app.set('view engine', 'ejs');
+app.use('/', function(req, res) {
+  res.render('/index');
+});
 
 //nodemailer
 app.use('/email', nodemailer);

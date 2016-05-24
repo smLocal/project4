@@ -16,19 +16,24 @@
         <a class="navbar-brand" href="">
         </a>
       </div>
+
       <ul class="nav navbar-nav navbar-right">
-          <li><a href='/'>Home</a></li>
-          <li><a href='/logout'>Logout</a></li>
-          <li><a href='/email'>Contact Us</a></li>
+          <li><a ui-sref='/'>Home</a></li>
+          <li ng-if='ctrl'><a ui-sref'/logout'>Logout</a></li>
+          <li><a ui-sref='/email'>Contact Us</a></li>
+          <li><a ui-sref='login'>Login</a></li>
+
       </ul>
     </div>
   </nav>
 
   <div class="container">
+  <div ui-view>
 
+  </div>
     <div class="row">
       <div class="col-xs-6">
-        <h1 class="equipment">About Us</h1>
+        <h1 class="">About Us</h1>
       </div>
     </div>
 
@@ -49,6 +54,7 @@
     </div>
 
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
 </body>
 </html>
 
