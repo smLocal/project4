@@ -4,19 +4,21 @@ var app = express();
 var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var db = require('./db.js');
+var db = require('./api/db.js');
 var passport = require('passport');
 var session = require('express-session');
 var flash    = require('connect-flash');
-var router = require('./routes/user_routes');
-var nodemailer = require('./routes/email');
+var router = require('./api/routes/user_routes');
+var nodemailer = require('./api/routes/email');
+var path = require('path');
 //Configure view engine to render EJS templates
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+// app.set('views', __dirname + '/views');
+// app.set('view engine', 'ejs');
+
 
 
 //Middleware
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + '/public')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
