@@ -1,0 +1,25 @@
+.button {
+  margin: 5px;
+  width: 75px;
+}
+
+.logout {
+  float: right;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.home {
+  float: right;
+  display: inline-block;
+}
+
+.homeBackground {
+  background: black;
+  background-size: cover;
+}
+
+.overflow {
+  height: 300px;
+  overflow: scroll
+}

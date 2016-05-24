@@ -1,0 +1,37 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "## FST repair shop site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smLocal/project4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smLocal/project4/issues"
+  },
+  "homepage": "https://github.com/smLocal/project4#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "connect-ensure-login": "^0.1.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.13",
+    "morgan": "^1.7.0",
+    "nodemailer": "^0.7.1",
+    "nodemailer-smtp-transport": "^2.4.2",
+    "passport": "^0.3.2",
+    "nodemailer-smtp-transport": "2.4.2",
+    "passport-local": "^1.0.0"
+  }
+}
