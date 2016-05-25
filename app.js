@@ -32,7 +32,7 @@ app.use(flash());
 app.set('public', path.join(__dirname, 'public'));
 app.set('view engine', 'ejs');
 app.use('/', function(req, res) {
-  res.render('/index');
+  res.render('/');
 });
 
 //nodemailer
