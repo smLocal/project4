@@ -33,7 +33,7 @@ passport.deserializeUser(function(id, done) {
 //Routes
 router.get('/', function(req, res) {
   if (req.user) {
-    res.render('index', { user: req.user });
+    res.render('/', { user: req.user });
   } else {
     res.render('splash');
   }
@@ -48,7 +48,7 @@ router.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
     console.log('Success');
-    res.redirect('/');
+    res.redirect('/partials/index');
   });
 
 
