@@ -11,11 +11,6 @@ var flash    = require('connect-flash');
 var router = require('./api/routes/user_routes');
 var nodemailer = require('./api/routes/email');
 var path = require('path');
-//Configure view engine to render EJS templates
-// app.set('views', __dirname + '/views');
-// app.set('view engine', 'ejs');
-
-
 
 //Middleware
 app.use(express.static(path.join(__dirname + '/public')));
@@ -28,9 +23,11 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash());
 
-// app.use('/', router);
+//Configure view engine to render EJS templates
 app.set('public', path.join(__dirname, 'public'));
 app.set('view engine', 'ejs');
+
+//root
 app.use('/', function(req, res) {
   res.render('/');
 });

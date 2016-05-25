@@ -30,7 +30,7 @@ passport.deserializeUser(function(id, done) {
 
 
 
-//Routes
+//Routes with Splash page, if else directives
 router.get('/', function(req, res) {
   if (req.user) {
     res.render('/', { user: req.user });

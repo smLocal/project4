@@ -12,7 +12,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 });
 
 
-router.get('/',function(req,res){
+router.get('/email',function(req,res){
   res.render('email');
 });
 

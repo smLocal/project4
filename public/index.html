@@ -19,7 +19,7 @@
       </div>
 
       <ul class="nav navbar-nav navbar-right">
-          <li><a href='/'>Home</a></li>
+          <li><a ui-sref='home'>Index</a></li>
           <li ng-if='ctrl'><a ui-sref'/logout'>Logout</a></li>
           <li><a ui-sref='email'>Contact Us</a></li>
           <li><a ui-sref='login'>Login</a></li>
@@ -29,23 +29,25 @@
   </nav>
 
   <div class="container">
-  <div ui-view>
 
-  </div>
+    <div ui-view>
+      <p></p>
+    </div>
+
     <div class="row">
       <div class="col-xs-6">
         <h1 class="">About Us</h1>
       </div>
-    </div>
+    </div><!-- row end -->
 
     <div>
-
       <h2>{{ ctrl.message   }} Hmmmm</h2>
     </div>
+
     <div>
       <p>Foreign Sport Technician has been servicing, repairing, and restoring Ferrari, Lamborghini, Maserati, Mercedes, BMWs,
       Porsche and other exotic foreign racing cars since 1970. Recognized throughout West Los Angeles as a reputable
-      professional mechanic, Foreign Sport Technician cares about your exotic vehicle as much as you do.
+      professional mechanic, Foreign Sport Technician cares about your exotic vehicle as much as you do.</p>
 
       <p>From oil change and regularly schedule maintenance to complete engine rebuilds and mechanical restoration, Foreign
       Sport Technician has the specialized tools and equipment to care for your exotic vehicle.</p>
@@ -54,7 +56,8 @@
       brakes, and racing suspensions.</p>
     </div>
 
-  </div>
+  </div> <!-- container end -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
 </body>
 </html>

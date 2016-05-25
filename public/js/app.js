@@ -13,9 +13,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       templateUrl: "partials/email.html",
     })
     .state('home', {
-      url: "/home",
+      url: "/",
       templateUrl: "partials/home.html",
     });
-
-
 }
