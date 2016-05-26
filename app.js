@@ -1,16 +1,16 @@
-var express= require('express');
+var express = require('express');
 var logger = require('morgan');
-var app = express();
-var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var db = require('./api/db.js');
 var passport = require('passport');
+var path = require('path');
 var session = require('express-session');
 var flash    = require('connect-flash');
+var db = require('./api/db.js');
 var router = require('./api/routes/user_routes');
 var nodemailer = require('./api/routes/email');
-var path = require('path');
+var port = process.env.PORT || 3000;
+var app = express();
 
 //Middleware
 app.use(express.static(path.join(__dirname + '/public')));

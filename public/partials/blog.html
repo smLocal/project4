@@ -1,9 +1,7 @@
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="">
-      </a>
+      <a class="navbar-brand" href=""></a>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
@@ -13,16 +11,11 @@
         <li><a ui-sref='login'>Login</a></li>
         <li><a ui-sref='blog'>Blog</a></li>
         <li><a ui-sref='register'>Register</a></li>
-
-
-
     </ul>
   </div>
 </nav>
 
 <div class="container">
-
-    <!-- <h2 ng-show="ctrl.selectedCharacter">{{ ctrl.selectedCharacter.firstName }} weilds a <span class="{{ ctrl.selectedCharacter.lightsaber | lowercase }}">{{ ctrl.selectedCharacter.lightsaber }}</span> lightsaber</h2> -->
 
     <form name="ctrl.newBlog" ng-submit="ctrl.addBlog()">
       <label>Title</label>
@@ -31,13 +24,5 @@
       <input type="text" name="content" ng-model="ctrl.blog.content">
       <input type="submit" value="Add">
     </form>
-
-    <h1>The Lightsaber Database</h1>
-    <ul>
-      <li ng-repeat="character in ctrl.characters" ng-click="ctrl.selectCharacter(character)">
-        {{ character.name }}'s lightsaber is <span class="{{ character.lightsaber | lowercase }}">{{ character.lightsaber }}</span> <a href="#" ng-click="ctrl.editCharacter(character)">Edit</a> <button ng-click="ctrl.deleteCharacter(character)">Delete</button>
-      </li>
-    </ul>
-  </main>
 
 </div>

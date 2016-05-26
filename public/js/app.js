@@ -1,6 +1,6 @@
 angular
-.module("myApp", ["ui.router"])
-.config(MainRouter);
+  .module("myApp", ["ui.router"])
+  .config(MainRouter);
 
 function MainRouter($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home')
@@ -14,7 +14,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     .state('blog', {
       url: "/blog",
       templateUrl: "partials/blog.html",
-      controller: "UsersController as ctrl"
+      controller: "BlogController as ctrl"
     })
     .state('login', {
       url: "/login",
@@ -22,6 +22,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     })
     .state('email', {
       url: "/email",
+      controller: "EmailController as email",
       templateUrl: "partials/email.html",
     })
     .state('home', {
