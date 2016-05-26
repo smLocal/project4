@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var passport = require('passport')
+var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var User = require('../models/user.js')
+var User = require('../models/user.js');
 
 
 
@@ -39,6 +39,12 @@ router.get('/', function(req, res) {
   }
 });
 
+//blog
+router.get('/blog', function(req, res){
+    res.render('blog');
+  });
+
+
 //passport Login
 router.get('/login', function(req, res) {
   res.render('login');
@@ -48,10 +54,8 @@ router.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
     console.log('Success');
-    res.redirect('/partials/index');
+    res.redirect('/partials/index');  // may need to change this partials from when kate took out index
   });
-
-
 
 //passport register
 
@@ -76,7 +80,6 @@ router.post('/register', function(req, res) {
       });
   });
 });
-
 
 router.get('/register', function(req, res) {
   res.render('register');

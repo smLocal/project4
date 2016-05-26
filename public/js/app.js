@@ -3,6 +3,8 @@ angular
 .config(MainRouter);
 
 function MainRouter($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/home')
+
   $stateProvider
     .state('login', {
       url: "/login",
@@ -13,7 +15,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       templateUrl: "partials/email.html",
     })
     .state('home', {
-      url: "/",
+      url: "/home",
       templateUrl: "partials/home.html",
+      controller: "UsersController as ctrl"
     });
 }

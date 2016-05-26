@@ -9,6 +9,7 @@ $(document).ready(function(){
         }
         $("#message").text("Sending E-mail...Please wait");
         $.post("/email", data, function(data){
+          console.log("clicked");
           console.log(data);
           if(data == "sent") {
             $("#message").empty().html("Email is been sent at " + data.to + " . Please check inbox !");

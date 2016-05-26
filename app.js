@@ -23,17 +23,28 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash());
 
-//Configure view engine to render EJS templates
-app.set('public', path.join(__dirname, 'public'));
-app.set('view engine', 'ejs');
+// //Configure view engine to render EJS templates
+// app.set('public', path.join(__dirname, 'public'));
+// app.set('view engine', 'ejs');
 
 //root
-app.use('/', function(req, res) {
-  res.render('/');
+app.get('/', function(req, res) {
+  res.render('index');
 });
+// app.use('/', function(req, res) {
+//   res.render('/');
+// });
+app.get('/blog', function(req, res) {
+  res.render('blog');
+});
+// app.use('/blog', router);
+// app.use('/blog', function(req, res) {
+//   res.render('blog');
+// });
+
 
 //nodemailer
-app.use('/email', nodemailer);
+app.use('/api/email', nodemailer);
 
 app.listen(port, function(){
   console.log("Listening on port " + port);

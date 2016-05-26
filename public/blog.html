@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-  <title>home</title>
+  <title>Recent Posts</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
   <script src="/js/users_controller.js"></script>
   <link rel="stylesheet" href="/css/main.css">
@@ -11,19 +10,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body ng-controller="UsersController as ctrl">
+<body ng-controller="BlogController as ctrl">
+  {{ ctrl.message }}
 
-  <div class="container">
-
-    <div ui-view>
-      <p></p>
-    </div>
-
-
-  </div> <!-- container end -->
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
 </body>
 </html>
-
-
-
