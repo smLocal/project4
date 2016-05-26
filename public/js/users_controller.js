@@ -6,18 +6,23 @@ angular.module("myApp")
 
 function UsersController() {
   var self = this
-  self.message = "hello there"
-  this.mailed = mailed
+  self.blog = {}
+
+self.addBlog = function() {
+
+      Blog.save(self.blog, function(blog) {
+        self.blogs.push(blog);
+        self.blog = {}
+      });
+
+  };
 
 
-function mailed() {
+function newBlog() {
 
   }
 }
 
-function BlogController() {
-  var self = this
-  self.message = "bloggedddd"
-}
+
 
 //function login($http)

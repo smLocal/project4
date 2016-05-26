@@ -6,6 +6,16 @@ function MainRouter($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home')
 
   $stateProvider
+    .state('register', {
+      url: "/register",
+      templateUrl: "partials/register.html",
+      controller: "UsersController as ctrl"
+    })
+    .state('blog', {
+      url: "/blog",
+      templateUrl: "partials/blog.html",
+      controller: "UsersController as ctrl"
+    })
     .state('login', {
       url: "/login",
       templateUrl: "partials/login.html",
