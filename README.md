@@ -20,6 +20,25 @@ done if you click on what type of repairs you are interested in.
 
 ## Technologies 
 
-I will use nodemailer, node, express, and maybe angular. I would like
-to add a gulpfile. I plan on adding materialize on Thursday morning and 
-then fixing issues Thursday afternoon.
+I will use nodemailer, node, express, and angular. I would like
+to add a gulpfile later. Also used Materialize and favicon, bcrypt, 
+nodemailer and ui-router.
+
+## Installation
+* Fork over the repo
+* Cd to project 4
+* Npm install
+* Or just visit the above heroku link
+
+## Unsolved Problems
+A big hurdle was starting off men stack and then going mean stack.
+I wouldn't recommend it to my enemy.
+* Login
+* Content
+* Blog
+* Functionality
+* Materialize
+* Etc
+
+## Table of Routes with their Auth Requirements
+* When did this get sneaked in?
