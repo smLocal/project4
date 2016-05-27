@@ -1,5 +1,5 @@
 angular
-  .module("myApp", ["ui.router", 'angular-parallax'])
+  .module("myApp", ["ui.router"])
   .config(MainRouter);
 
 function MainRouter($stateProvider, $urlRouterProvider) {
