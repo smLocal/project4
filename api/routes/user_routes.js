@@ -5,9 +5,9 @@ var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/user.js');
 
 
-router.get('/', function(req, res) {
-  res.render('index');
-});
+// router.get('/', function(req, res) {
+//   res.render('index');
+// });
 
 passport.use('local', new LocalStrategy(
   function(username, password, done) {
@@ -50,14 +50,14 @@ router.get('/blog', function(req, res){
 
 //passport Login
 router.get('/login', function(req, res) {
-  res.render('partials/login');
+  res.render('login');
 });
 
 router.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
     console.log('Success');
-    res.render('index');  // may need to change this partials from when kate took out index
+    res.redirect('login');  // may need to change this partials from when kate took out index
   });
 
 //passport register

@@ -1,7 +1,21 @@
-.parallax{
-  position: static;
+.container {
+  background-color: white;
+  background-size: 100%;
+}
+.container1 {
+  background-color: white;
+  background-size: 100%;
+}
+.header {
+  color: teal;
+}
+.header1 {
+  color: white;
 }
 
+floss {
+  text-decoration-color: white;
+}
 
 .button {
   margin: 5px;
