@@ -1,5 +1,5 @@
 angular
-  .module("myApp", ["ui.router"])
+  .module("myApp", ["ui.router", 'ui.bootstrap'])
   .config(MainRouter);
 
 function MainRouter($stateProvider, $urlRouterProvider) {
