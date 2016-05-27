@@ -24,9 +24,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash());
 
 //root
-app.get('/', function(req, res) {
-  res.render('index');
-});
+app.use('/', router);
 
 app.get('/blog', function(req, res) {
   res.render('blog');
