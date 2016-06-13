@@ -14,7 +14,7 @@ function EmailController($http) {
     $http
       .post('/api/email', self.message)
       .then(function(){
-        self.message = {}
+        self.message = {};
         window.alert("Email Sent!");
       });
   }
