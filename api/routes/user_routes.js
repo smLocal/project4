@@ -54,7 +54,7 @@ router.get('/blog', function(req, res){
 // });
 
 router.post('/login',
-  passport.authenticate('local', { failureRedirect: '/' }),
+  passport.authenticate('local', { failureRedirect: 'http://localhost:3000/#/login' }),
   function(req, res) {
     console.log('Success');
     res.redirect('/');  // may need to change this partials from when kate took out index
