@@ -38,7 +38,7 @@ I wouldn't recommend it to my enemy.
 * Blog
 * Functionality
 * Materialize
-* Etc
+* Etc.
 
 ## Table of Routes with their Auth Requirements
 * When did this get sneaked in?
