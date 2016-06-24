@@ -6,7 +6,7 @@ var User = require('../models/user.js');
 
 
 // router.get('/', function(req, res) {
-//   res.render('index');
+//   res.get('index');
 // });
 
 passport.use('local', new LocalStrategy(
@@ -36,28 +36,28 @@ passport.deserializeUser(function(id, done) {
 //Routes with Splash page, if else directives
 router.get('/', function(req, res) {
   if (req.user) {
-    res.render('/', { user: req.user });
+    res.get('/', { user: req.user });
   } else {
-    res.render('splash');
+    res.get('splash');
   }
 });
 
 //blog
 router.get('/blog', function(req, res){
-    res.render('blog');
+    res.get('blog');
   });
 
 
 //passport Login
-router.get('/login', function(req, res) {
-  res.render('login');
-});
+// router.get('/login', function(req, res) {
+//   res.get('login');
+// });
 
 router.post('/login',
-  passport.authenticate('local', { failureRedirect: '/login' }),
+  passport.authenticate('local', { failureRedirect: '/' }),
   function(req, res) {
     console.log('Success');
-    res.redirect('login');  // may need to change this partials from when kate took out index
+    res.redirect('/');  // may need to change this partials from when kate took out index
   });
 
 //passport register
@@ -84,8 +84,10 @@ router.post('/register', function(req, res) {
   });
 });
 
+
+
 router.get('/register', function(req, res) {
-  res.render('register');
+  res.get('register');
 });
 
 
