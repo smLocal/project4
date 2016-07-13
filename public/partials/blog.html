@@ -26,3 +26,38 @@
     </form>
 
 </div>
+<body ng-controller="TodosController as todoCtrl">
+  <h1>This is a test</h1>
+  <div ng-repeat="todo in todoCtrl.all">
+    <p>
+      <input type="text" ng-model="todo.title">
+
+      <label for ="todo-difficulty">Difficulty</label>
+      <input type="number" id="todo-difficulty" min ="1" max="3" placeholder="1" ng-model='todo.difficulty' />
+
+      <label for ="todo-priority">Priority</label>
+      <input type="number" id="todo-priority" min ="1" max="3" placeholder="1" ng-model='todo.priority' />
+
+
+      <button ng-click="todoCtrl.updateTodo(todo)">Update</button>
+      <!-- <span ng-click="todoCtrl.completeTodo(todo)">{{todo.title}}</span> -->
+      <button ng-if="!todo.isComplete" ng-click="todoCtrl.completeTodo(todo)">Complete</button >
+      <span ng-if="todo.isComplete">...Done</span>
+
+      <button ng-click="todoCtrl.deleteTodo(todo)">Delete</button>
+    </p>
+  </div>
+  <form class="add-todo" ng-submit="todoCtrl.addTodo()">
+    <div>
+      <label for ="new-todo-title">Task</label>
+      <input type="text" id="new-todo-title" placeholder="Take out the trash" ng-model='todoCtrl.newTodo.title' />
+
+      <label for ="new-todo-difficulty">Difficulty</label>
+      <input type="number" id="new-todo-difficulty" min ="1" max="3" placeholder="1" ng-model='todoCtrl.newTodo.difficulty' />
+
+      <label for ="new-todo-priority">Priority</label>
+      <input type="number" id="new-todo-priority" min ="1" max="3" placeholder="1" ng-model='todoCtrl.newTodo.priority' />
+      <input type="submit">
+    </div>
+  </form>
+</body>
