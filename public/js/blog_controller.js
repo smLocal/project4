@@ -19,7 +19,7 @@ function BlogController($http){
   function getBlog(){
     $http
         console.log("testingg")
-        .get('http://localhost:3000/api/blog')
+        .get('http://localhost:3000/api/routes/blog')
         console.log("tested")
         .then(function(response){
           console.log(response);
@@ -29,7 +29,7 @@ function BlogController($http){
   getBlog();
   function addblog(){
     $http
-        .post('http://localhost:3000/api/blog', self.newblog)
+        .post('http://localhost:3000/api/routes/blog', self.newblog)
         .then(function(response){
           console.log(response);
           self.newblog = {};
@@ -40,7 +40,7 @@ function BlogController($http){
   function completeblog(blog){
     blog.isComplete=true;
     $http
-        .patch('http://localhost:3000/api/blog/'+blog._id,blog)
+        .patch('http://localhost:3000/api/routes/blog/'+blog._id,blog)
         .then(function(response){
           console.log(response);
           getBlog();
@@ -49,7 +49,7 @@ function BlogController($http){
   function updateblog(blog){
     console.log(blog);
     $http
-        .patch('http://localhost:3000/api/blog/'+blog._id,blog)
+        .patch('http://localhost:3000/api/routes/blog/'+blog._id,blog)
         .then(function(response){
           console.log(response);
           getBlog();
@@ -58,7 +58,7 @@ function BlogController($http){
 
   function deleteblog(blog){
     $http
-        .delete('http://localhost:3000/api/blog/'+blog._id)
+        .delete('http://localhost:3000/api/routes/blog/'+blog._id)
         .then(function(response){
           getBlog();
         });
