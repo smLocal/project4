@@ -1,5 +1,5 @@
 angular.module('myApp')
-  .controller('BlogController',BlogController);
+  .controller('BlogController', BlogController);
 
 
 BlogController.$inject=['$http'];
@@ -18,7 +18,9 @@ function BlogController($http){
 
   function getBlog(){
     $http
+        console.log("testingg")
         .get('http://localhost:3000/api/blog')
+        console.log("tested")
         .then(function(response){
           console.log(response);
           self.all = response.data;

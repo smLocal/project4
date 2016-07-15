@@ -11,6 +11,7 @@ var router = require('./api/routes/user_routes');
 var nodemailer = require('./api/routes/email');
 var port = process.env.PORT || 3000;
 var app = express();
+var blog = require('./api/routes/blog');
 
 //to allow front to access back
 var allowCrossDomain = function(req, res, next) {
@@ -42,6 +43,8 @@ app.get('/blog', function(req, res) {
 
 //nodemailer
 app.use('/api/email', nodemailer);
+
+app.use('/api/blog', nodemailer);
 
 app.listen(port, function(){
   console.log("Listening on port " + port);
