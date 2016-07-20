@@ -18,7 +18,7 @@ function BlogController($http){
 
   function getBlog(){
     $http
-        console.log(" testingg")
+        console.log("testingg")
         .get('http://localhost:3000/api/routes/blog')
         console.log("tested")
         .then(function(response){
